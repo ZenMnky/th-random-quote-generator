@@ -71,7 +71,7 @@ function printQuote() {
      
   function buildSourceHTML() {
     let sourceHTML = '';
-    sourceHTML = `${newQuoteObj.source}`;
+    sourceHTML = `<p>${newQuoteObj.source}`;
 
     if (newQuoteObj.citation != '') {
       sourceHTML += `
@@ -83,6 +83,7 @@ function printQuote() {
       <span class="citation">${newQuoteObj.year}</span>
       `;
     }
+    sourceHTML += `</p>`;
     return sourceHTML;
   }
 
