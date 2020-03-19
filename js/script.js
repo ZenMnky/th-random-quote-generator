@@ -7,6 +7,14 @@ project 1 - A Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
+/**
+ * Still to do:
+ * + Add 'tag' property to objects
+ * + Display tag properties
+ * + Random background color
+ * + Auto refresh
+ */
+
 /*** 
  * `quotes` array 
 ***/
@@ -49,6 +57,19 @@ const quotes = [
   }
 ]
 
+/**
+ * Background Colors Array
+ */
+const bgColors = ['#30e849', '#30c9e8', '#c79816', '#e86830', '#e83a30']
+
+/**
+ * Random BG Color function
+ */
+function setRandomBgColor() {
+  const upperLimit = bgColors.length;
+  const newColor = Math.floor(Math.random() * upperLimit + 1);
+  document.body.style.backgroundColor = bgColors[newColor];
+}
 
 /***
  * `getRandomQuote` function
@@ -88,8 +109,17 @@ function printQuote() {
   }
 
   quote.innerHTML = newQuoteObj.quote;
-  source.innerHTML = buildSourceHTML();  
+  source.innerHTML = buildSourceHTML();
+  setRandomBgColor();
+ 
+
+   /**
+    * Auto-refresh quotes at regular intervals
+    */
+
 }
+
+
 
 
 /***
