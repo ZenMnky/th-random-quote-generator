@@ -104,6 +104,13 @@ function printQuote() {
       <span class="citation">${newQuoteObj.year}</span>
       `;
     }
+    if (newQuoteObj.tags != ''){
+      sourceHTML += `
+      <p>
+      <span class="tags">#${newQuoteObj.tags.join(', #')}</span>
+      </p>
+      `;
+    }
     sourceHTML += `</p>`;
     return sourceHTML;
   }
