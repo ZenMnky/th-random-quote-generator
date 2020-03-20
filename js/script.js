@@ -57,7 +57,7 @@ const quotes = [
 /**
  * Background Colors Array
  * 
- * Green, Blue, Auburn, Lighter Auburn, Red, Natural Paper
+ *  Green, Blue, Auburn, Lighter Auburn, Red, Natural Paper
  */
 const bgColors = ['#30e849', '#30c9e8', '#c75716', '#e86830', '#e83a30', '#f4c89c']
 
