@@ -11,8 +11,8 @@ project 1 - A Random Quote Generator
  * Still to do:
  * + Add 'tag' property to objects
  * + Display tag properties
- * + Random background color
- * + Auto refresh
+  * + Auto refresh
+  * + Update comments
  */
 
 /*** 
@@ -38,7 +38,7 @@ const quotes = [
     year: ''
   },
   {
-    quote: `Today I escaped from the crush of circumstances, or better put, I threw them out, for the crush wasn't from otside me but in my own assumptions.`,
+    quote: `Today I escaped from the crush of circumstances, or better put, I threw them out, for the crush wasn't from outside me but in my own assumptions.`,
     source: 'Marcus Aurelius',
     citation: 'Meditations, 9.13',
     year: '121-180 AD'
