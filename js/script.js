@@ -7,7 +7,9 @@ project 1 - A Random Quote Generator
  */
 
 /*** 
- * `quotes` array 
+ * `quotes` array
+ * Holds a collection of quotes and connected information (source, citation, year, tags)
+ *
 ***/
 const quotes = [
   {
@@ -59,11 +61,13 @@ const quotes = [
  * 
  *  Green, Blue, Auburn, Lighter Auburn, Red, Natural Paper
  */
-const bgColors = ['#30e849', '#30c9e8', '#c75716', '#e86830', '#e83a30', '#f4c89c']
+const bgColors = ['#30e849', '#30c9e8', '#c75716', '#e86830', '#e83a30', '#f4c89c'];
 
 
 /**
  * Random BG Color function
+ * Selects a random color from the bgColors array
+ * Sets page background to the random color
  */
 function setRandomBgColor() {
   const upperLimit = bgColors.length;
@@ -73,6 +77,7 @@ function setRandomBgColor() {
 
 /***
  * `getRandomQuote` function
+ * Selects and returns a random object from the quote array
 ***/
 function getRandomQuote() {
   const upperLimit = quotes.length;
@@ -83,6 +88,7 @@ function getRandomQuote() {
 
 /***
  * `printQuote` function
+ * 
 ***/
 
 function printQuote() {
@@ -122,10 +128,9 @@ function printQuote() {
 }
 
 /**
-    * Auto-refresh quotes and bg color every 10 seconds
-    */
+ *  Auto-refresh quotes and bg color every 10 seconds
+ */
 setInterval(printQuote, 10000);
-
 
 
 
