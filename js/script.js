@@ -122,9 +122,9 @@ function printQuote() {
 }
 
 /**
-    * Auto-refresh quotes at regular intervals
+    * Auto-refresh quotes and bg color every 10 seconds
     */
-
+setInterval(printQuote, 10000);
 
 
 
