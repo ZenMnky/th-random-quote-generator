@@ -53,7 +53,14 @@ const quotes = [
     citation: `The Way to Love`,
     year: '1995',
     tags: ['stoicism']
-  }
+  },
+  {
+    quote: `"To live with the gods." And to do that is to show them that your soul accepts what it is given and does what the spirit requires - the spirit God gave each of us to lead and guide us, a fragment of himself. Which is our mind, our logos.`,
+    source: 'Marcus Aurelius',
+    citation: 'Meditations, 5.27',
+    year: '121-180 AD',
+    tags: ['stoicism']
+  },
 ]
 
 /**
@@ -71,7 +78,7 @@ const bgColors = ['#30e849', '#30c9e8', '#c75716', '#e86830', '#e83a30', '#f4c89
  */
 function setRandomBgColor() {
   const upperLimit = bgColors.length;
-  const newColor = Math.floor(Math.random() * upperLimit + 1);
+  const newColor = Math.floor(Math.random() * upperLimit);
   document.body.style.backgroundColor = bgColors[newColor];
 }
 
@@ -81,7 +88,7 @@ function setRandomBgColor() {
 ***/
 function getRandomQuote() {
   const upperLimit = quotes.length;
-  const randomNumber = Math.floor(Math.random() * upperLimit + 1)
+  const randomNumber = Math.floor(Math.random() * upperLimit);
   return quotes[randomNumber];
 }
 
@@ -92,9 +99,9 @@ function getRandomQuote() {
 ***/
 
 function printQuote() {
-  let newQuoteObj = getRandomQuote();
-  let quote = document.querySelector('p.quote');
-  let source = document.querySelector('p.source');
+  const newQuoteObj = getRandomQuote();
+  const quote = document.querySelector('p.quote');
+  const source = document.querySelector('p.source');
      
   function buildSourceHTML() {
     let sourceHTML = '';
@@ -127,10 +134,6 @@ function printQuote() {
  
 }
 
-/**
- *  Auto-refresh quotes and bg color every 10 seconds
- */
-setInterval(printQuote, 10000);
 
 
 
